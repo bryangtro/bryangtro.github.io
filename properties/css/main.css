@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans:wght@700&display=swap');
 
 * {
     margin: 0;
@@ -6,6 +6,82 @@
 }
 
 h1 {
-    font-family: font-family: 'PT Sans', sans-serif;
-    font-size: 35px;
+    font-size: 45px;
+    padding-bottom: 0px;
+}
+
+
+.blast {
+    opacity: 0;
+    display: inline-block;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    font-size: 55px;
+    color: white;
+}
+
+    .blast:hover {
+        color: #39fddf;
+        animation: wiggle 0.5s;
+    }
+
+@keyframes wiggle {
+    25% {
+        transform: scale(0.7,1.4);
+    }
+
+    50% {
+        transform: scale(1.2, 0.7);
+    }
+
+    75% {
+        transform: scale(0.6, 1.3);
+    }
+}
+
+@keyframes fadein { 
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+h2 {
+    color: #a3a3a3;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    letter-spacing: 3px;
+    padding-top: 12px;
+}
+
+.text-zone {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 40%;
+    max-height: 90%;
+    animation: fadein 3s;
+    cursor: context-menu;
+}
+
+
+
+.image-zone {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 40%;
+    max-height: 90%;
+    max-width: 90%;
 }
